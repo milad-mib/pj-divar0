@@ -2,12 +2,6 @@ from django.db import models
 import uuid
 # from django.contrib.auth.models import User
 # from django.conf import settings
-
-
-
-
-
-
 class Divar (models.Model):
     category_list = (
     ('TV','Telvision'),('Mobile','Monile'),('Laptop','laptop'),('PC','PC'),('Car','car'),('Camera','Camera'),
@@ -32,7 +26,7 @@ class Divar (models.Model):
 
     price    = models.DecimalField(max_digits = 100, decimal_places = 10, default = 'Agreement')
 
-    Phone    = models.IntegerField(blank = True,null=True)
+    Phone    = models.IntegerField(blank = True, null=True)
 
     Author   = models.CharField (max_length = 100 , blank=True, null=True)
 
@@ -45,5 +39,5 @@ class Divar (models.Model):
 
 
     def __str__(self):
-        return '%s,%s,%s,%s,%s,%s,%s,%s,'% (self.category, self.Ad_Titel, self.Description, self.City,
+        return '%s,%s,%s,%s,%s,%s,%s,%s,%s' % (self.Category, self.Ad_Titel, self.Description, self.City,
                                             self.status, self.Phone, self.Author, self.Date, self.slug)
