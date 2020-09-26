@@ -1,3 +1,20 @@
 body {
-  background-color:aqua;
+  background-color: cyan;
+  background-image:url(home.jpg);
+  background-repeat:repeat-y :no-repeat;
+  background-attachment: fixed;
+  color: whitesmoke;
+
+}
+body *{
+  font-family: Arial, Helvetica, sans-serif;
+  }
+h1,h2,h3,h4,h5{
+  font-weight: normal;
+  margin:0;
+  color:red;
+}
+a,a:hover,a:visited{
+  color: green ;
+  text-decoration: none;
 }

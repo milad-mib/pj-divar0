@@ -1,19 +1,14 @@
-  {% load static %}
-  <!DOCTYPE html>
-  <html lang="en" dir="ltr">
-    <head>
-      <meta charset="utf-8">
-      <title>Divar</title>
-      <link rel="stylesheet" href="{% static 'style.css' %}">
-      <h1>WelCome to </h1>
-    </head>
-    <body>
-      {% for show_ad in show_ad %}
-      <h2> <a href="#">{{show_ad.Ad_Titel}}</a> </h2>
-      <p>{{show_ad.Picture}}</p>
-      <p>City : {{show_ad.City}}   </p>
-      <p>Status : {{show_ad.status}} </p>
-      <p>{{show_ad.Date}}  </p>
-      {% endfor %}
-      </body>
-  </html>
+{% extends 'home/base.html' %}
+{% block home %}
+{% block title %}
+      Divar
+{% endblock %}
+
+  {% for show_ad in show_ad %}
+  <h1> <a href="#">{{show_ad.Picture}}</a> </h1>
+  <h2> <a href="#">{{show_ad.Ad_Titel}}</a> </h2>
+  <p>City : {{show_ad.City}}   </p>
+  <p>Status : {{show_ad.status}} </p>
+  <p>{{show_ad.Date}}  </p>
+  {% endfor %}
+  {% endblock %}
