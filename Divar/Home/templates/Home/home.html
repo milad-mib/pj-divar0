@@ -1,14 +1,17 @@
 {% extends 'home/base.html' %}
-{% block home %}
-{% block title %}
-      Divar
-{% endblock %}
 
+{% block title %}
+Divar صفحه اصلی
+{% endblock %}
+{% block home %}
+<div class="container">
+  <h3> دیوار تهران </h3>
   {% for show_ad in show_ad %}
-  <h1> <a href="#">{{show_ad.Picture}}</a> </h1>
-  <h2> <a href="#">{{show_ad.Ad_Titel}}</a> </h2>
+  <h1> <a href="{% url 'Home:detail_show' slug=show_ad.slug %}">{{show_ad.Picture}} </a> </h1>
+  <h2> <a href="{% url 'Home:detail_show' slug=show_ad.slug %}">{{show_ad.Ad_Titel}}</a> </h2>
   <p>City : {{show_ad.City}}   </p>
   <p>Status : {{show_ad.status}} </p>
   <p>{{show_ad.Date}}  </p>
   {% endfor %}
+    </div>
   {% endblock %}
