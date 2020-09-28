@@ -1,11 +1,11 @@
 {% extends 'home/base.html' %}
 {% block title %}
-{{show_detail.Ad_Titel}}
+ {{show_detail.Category}}.{{show_detail.Ad_Titel}} 
 {% endblock %}
 {% block home %}
 <div class="container">
   <h3> دیوار تهران </h3>
-  <p>{{show_detail.Picture}} </p>
+  <img src="{{show_detail.Picture.url}}" alt="Divar Picture" width="180" height="120"> </a> </h1>
   <p>Category : {{show_detail.Category}}</p>
   <p>Titel: sd{{show_detail.Ad_Titel}} </p>
   <p>Description : {{show_detail.Description}} </p>

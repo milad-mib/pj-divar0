@@ -7,7 +7,7 @@ Divar صفحه اصلی
 <div class="container">
   <h3> دیوار تهران </h3>
   {% for show_ad in show_ad %}
-  <h1> <a href="{% url 'Home:detail_show' slug=show_ad.slug %}">{{show_ad.Picture}} </a> </h1>
+  <h1> <a href="{% url 'Home:detail_show' slug=show_ad.slug %}"> <img src="{{show_ad.Picture.url}}" alt="Divar Picture" width="180" height="120"> </a> </h1>
   <h2> <a href="{% url 'Home:detail_show' slug=show_ad.slug %}">{{show_ad.Ad_Titel}}</a> </h2>
   <p>City : {{show_ad.City}}   </p>
   <p>Status : {{show_ad.status}} </p>
