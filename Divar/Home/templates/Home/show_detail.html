@@ -1,0 +1,18 @@
+{% extends 'home/base.html' %}
+{% block title %}
+{{show_detail.Ad_Titel}}
+{% endblock %}
+{% block home %}
+<div class="container">
+  <h3> دیوار تهران </h3>
+  <p>{{show_detail.Picture}} </p>
+  <p>Category : {{show_detail.Category}}</p>
+  <p>Titel: sd{{show_detail.Ad_Titel}} </p>
+  <p>Description : {{show_detail.Description}} </p>
+  <p>City : {{show_detail.City}}</p>
+  <p>Status : {{show_detail.status}} </p>
+  <p>price : {{show_detail.price}} </p>
+  <p>Phone : {{show_detail.Phone}} </p>
+  <p>{{show_detail.Date}}  </p>
+      </div>
+  {% endblock %}

@@ -7,4 +7,6 @@ def Home (request,):
     return render(request, 'Home/home.html', {'show_ad':show_ads})
 # namayesh link entekhabi
 def detailshow (request,slug):
-    return HttpResponse (slug)
+    # return HttpResponse (slug)
+    show_detail = models.Divar.objects.get(slug=slug)
+    return render (request, 'Home/show_detail.html', {'show_detail':show_detail}  )
