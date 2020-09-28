@@ -1,0 +1,13 @@
+{% extends 'account\base.html' %}
+{% block title %}
+صفحه وروود و ثبت نام
+{% endblock %}
+{% block home %}
+  <h1>صفحه ثبت نام</h1>
+<form class="" action="{% url 'account:signup_form' %}" method="post">
+    {{ form }}
+    {% csrf_token %}
+    <input type="submit" value="ثبت نام">
+  </form>
+
+{% endblock %}

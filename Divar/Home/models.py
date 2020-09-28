@@ -8,7 +8,7 @@ class Divar (models.Model):
     )
     Category = models.CharField(max_length = 100, blank = True, null = True, choices = category_list)
 
-    Picture  =models.ImageField(default='default.jpg')
+    Picture  =models.ImageField(default = 'default.jpg',blank = True)
 
     Ad_Titel = models.CharField(max_length = 100, blank = True, null = True)
 

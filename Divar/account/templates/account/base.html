@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>
+    {% block title %}
+    -----------------
+    {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+  <body>
+    <h1> <a href="{% url 'Home:Home' %}"> <img src="{% static 'icon.png' %}" alt="Logo" width="80" height="50" > </a>
+    </h1>
+  <div class="wrapper">
+    {% block home  %}
+    {% endblock %}
+
+</div>
+  </body>
+</html>
