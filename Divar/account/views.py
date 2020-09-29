@@ -4,6 +4,7 @@ from django.contrib.auth import login
 from django.contrib.auth import logout
 from Home import models
 from django.contrib.auth.decorators import login_required
+from . import forms
 
 def signup_form (request):
     if request.method == 'POST':
@@ -40,4 +41,11 @@ def logout_form (request):
 
 @login_required(login_url="account:login_form")
 def create_form(request):
-    return render (request,'account/create.html')
+    if request.method == 'POST':
+        form = forms.create_form(request.POST, request.FILES)
+        if form.is_valid():
+            #save cread
+            return redirect('Home:Home')
+    else:
+        form = forms.create_form()
+    return render (request,'account/create.html', {'form':form})
