@@ -11,7 +11,49 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
     </head>
   <body>
-    <h1> <a href="{% url 'Home:Home' %}"> <img src="{% static 'icon.png' %}" alt="Logo" width="80" height="50" > </a>
+    <style>
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: #111111;
+  }
+  </style>
+  </head>
+  <body>
+
+  <h2></h2>
+  <p></p>
+
+    <ul>
+    <li><a href="{% url 'Home:Home' %}">دیوار</a></li>
+    <li><a href="">ایچاد آگهی</a></li>
+    <li><a href="{% url 'account:signup_form' %}">ثبت نام</a></li>
+    <li><a href="{% url 'account:login_form' %}">ورود</a></li>
+    <li><a href="{% url 'account:logout_form' %}">خروج</a></li>
+    <li><a href="{% url 'Home:about_me' %}">درباره ما</a></li>
+    <li><a href="{% url 'Home:content' %}">تماس با ما</a></li>
+
+  </ul>
+    {# <h1> <a href="{% url 'account:logout_form' %}"><button type="button">خروج</button></a> </h1> #}
+    {# <h1> <a href="{% url 'Home:Home' %}"> <img src="{% static 'icon.png' %}" alt="Logo" width="80" height="50" > </a> #}
     </h1>
   <div class="wrapper">
     {% block home  %}

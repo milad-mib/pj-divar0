@@ -10,3 +10,10 @@ def detailshow (request,slug):
     # return HttpResponse (slug)
     show_detail = models.Divar.objects.get(slug=slug)
     return render (request, 'Home/show_detail.html', {'show_detail':show_detail}  )
+
+
+def about_me(request):
+    return render(request,'Home/about_me.html' )
+
+def contact(request):
+    return render(request ,'Home/contact.html' )
