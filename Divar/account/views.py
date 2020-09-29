@@ -25,8 +25,11 @@ def login_form(request):
             #login user
             user = form.get_user()
             login(request,user)
-            return redirect('Home:Home')
-
+            if 'next' in request.POST:
+                #next pege
+                return redirect(request.POST.get('next'))
+            else:
+                return redirect('Home:Home')
     else:
         form = AuthenticationForm()
     return render(request, 'account/login.html' ,{'form':form})
