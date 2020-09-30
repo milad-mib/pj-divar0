@@ -4,7 +4,7 @@
 {% endblock %}
 {% block home %}
   <h1>صفحه ایجاد آگهی</h1>
-<form class="site_form" action="{% url 'account:create_form' %}" method="post" enctype="multipart/form-data">
+<form class="create-form" action="{% url 'account:create_form' %}" method="post" enctype="multipart/form-data">
     {{ form }}
     {% csrf_token %}
     <input type="submit" value="ایجادآگهی">

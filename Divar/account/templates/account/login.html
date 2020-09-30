@@ -4,7 +4,7 @@
 {% endblock %}
 {% block home %}
   <h1>صفحه وروود</h1>
-<form class="" action="{% url 'account:login_form' %}" method="post">
+<form class="login-form" action="{% url 'account:login_form' %}" method="post">
     {{ form }}
     {% csrf_token %}
     {% if request.GET.next %}
@@ -13,6 +13,10 @@
 
 
     <input type="submit" value="وروود">
+    
+
+
+
   </form>
 
 {% endblock %}
