@@ -61,11 +61,35 @@ div.wrapper h1{
    padding-bottom: 40px
 
  }
- .show img {
-   position: center;
- }
 
  .show p{
   font-size: 1.1em;
 
  }
+.login-form{
+  margin-top: 60px;
+  border :1px solid red;
+  padding: 20px;
+
+}
+.login-form input,.login-form textarea{
+  display: block;
+  margin: 20px 0 0 0;
+  padding: 1px;
+}
+.errorlist li{
+  padding: 10px;
+  list-style-type: none;
+  color: #ff5722;
+  margin: 10PX 0;
+
+}
+.login-form input[type='submit']{
+  border:0;
+  background-color: beige;
+  color: red;
+  font-size: 1.4em;
+  
+  border-radius: 3px;
+  margin: 16px 0;
+}
