@@ -84,12 +84,12 @@ div.wrapper h1{
   margin: 10PX 0;
 
 }
-.login-form input[type='submit']{
+.login-form input[type='submit'],.login-form button[type='button']{
   border:0;
   background-color: beige;
   color: red;
   font-size: 1.4em;
-  
+
   border-radius: 3px;
   margin: 16px 0;
 }

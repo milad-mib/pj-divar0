@@ -44,7 +44,11 @@ def create_form(request):
     if request.method == 'POST':
         form = forms.create_form(request.POST, request.FILES)
         if form.is_valid():
+            instance = form.save(commit = False)
+            instance.Author = request.user
+            instance.save()
             #save cread
+
             return redirect('Home:Home')
     else:
         form = forms.create_form()
